@@ -1,0 +1,310 @@
+/* by Mark Que Bumanglag. mark-b.com */
+
+/* =Typography
+-----------------------------------------------------------------------------*/
+
+
+body {
+	font-family: 'Droid Serif';	
+	
+}
+
+#left h1 {
+	font-size: 3em;
+	color: white;
+	margin-bottom: 10px;
+}
+
+#left h4 {
+	color: white;
+}
+	
+/* =Links
+-----------------------------------------------------------------------------*/
+
+
+/* =Layout
+-----------------------------------------------------------------------------*/
+
+body {
+	overflow: hidden;
+}
+
+#cont {
+	width: 1024px;
+	height: 768px;
+	padding: 0;
+	margin: 0;
+	background: grey;
+	position: relative;
+	overflow: hidden;
+	border-bottom: 1px solid grey;
+	top: 0;
+	left: 0;
+}
+
+#left {
+	position: fixed;
+	left:0;
+	width: 1024px;
+	height: 768px;
+	margin: 0;
+	background: #FFF;
+	z-index: 3;
+	overflow: hidden;
+	-webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, 0.7);
+	box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, 0.7);
+}
+
+#left2 {
+	position: fixed;
+	left:0;
+	width: 1024px;
+	height: 768px;
+	margin: 0;
+	background: #393939;
+	z-index: 5;
+	opacity: .01;
+	overflow: hidden;
+	-webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, 0.7);
+	box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, 0.7);
+}
+
+#right {
+	position:absolute; 
+	overflow: hidden;
+	top: 30px;
+	right: 30px;
+	width: 230px;
+	height: 768px;
+	margin: 0;
+	z-index: 100;
+}
+
+#hidden {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 9000px;
+	height: 768px;
+	margin: 0;	
+	background: url(../img/bg2.jpg);
+	color: #FFF;
+	z-index: 1;	
+	
+}
+
+/* hidden cont */
+#hidden div{
+	float: right;
+	
+}
+.whiteCont {
+	width:900px;
+	border: 10px solid rgba(255,255,255,0);
+	background: rgba(255,255,255,0.3);
+	margin:30px 10px 0 33px;
+	color: #393939;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	height: 670px;
+	position: relative;
+}
+
+.pBottom{
+	clear: both;
+	margin: 0;
+	padding: 0;
+	height: 10px;
+	display: block;
+	width: 900px;
+	background: rgba(0,0,0,0);
+}
+
+.pLeft{
+	float: left;
+	margin: 0 0 0 10px !important;
+}
+
+.first{
+	clear: both;
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 0;
+	display: block;
+}
+
+.last{
+	float: left;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+/* */
+
+.topHidden {
+	position: absolute;
+	top:-50px;
+	width: 1004px;
+	height: 30px;
+	padding: 10px;	
+	margin: 0;	
+	background: #393939;
+	color: white;
+	z-index: 100;	
+}
+
+.bottomHidden {
+	position: fixed;
+	bottom:0px;
+	width: 1004px;
+	height: 55px;
+	padding: 10px 15px 4px 15px;	
+	margin: 0;	
+	background: rgba(0,0,0,0.8);
+	color: white;
+	z-index: 300;
+	box-shadow: inset 0 20px 20px -20px #000000;	
+}
+
+div.iconTip {
+	float: left;
+	width: 40px;
+	-webkit-animation-name: pulse;
+	-webkit-animation-duration: 4s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+
+}
+
+h5.tipClass {
+	float: left;
+	margin: 2px 0 0 5px;
+	font-family: 'Droid Serif';
+	font-size: 24px;
+	font-style: italic;
+	font-weight: lighter;
+}
+
+#mainTextWrap {
+	position: fixed;
+	z-index: 100;
+	left: 25px;
+	top: 25px;
+	
+}
+
+div.iconOff {
+	background: rgba(255,80,18,1);
+	padding: 10px;
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	
+}
+
+
+div.iconOn {
+	background: rgba(59,175,179,1);
+	padding: 10px;
+	position: absolute;
+	height: 40px;
+	width: 40px;
+}
+
+div.back {
+	background: rgba(45, 45, 45, 0.85);
+	padding: 15px 10px 5px 10px;
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	color: rgba(213,201,66,1);
+	font-family: 'Droid Serif';
+	font-style: italic;
+	font-weight: lighter;
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+
+/* =Left
+-----------------------------------------------------------------------------*/
+
+
+/* =Right
+-----------------------------------------------------------------------------*/
+
+
+
+#right ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+	text-align:left;
+	width: 480px;
+}
+
+#right li {
+	padding:0;
+	background: rgba(45,45,45,0.85);
+	margin-bottom: 10px;
+	cursor: pointer;
+	height: 60px;
+	vertical-align: middle;
+}
+
+
+
+#right li a{
+	color: rgba(213,201,66,1);
+	text-decoration: none;
+	font-family: 'Droid Serif';
+	font-style: italic;
+	font-weight: lighter;
+	font-size: 33px;
+	margin-left: 70px;
+	vertical-align: middle;
+	position: relative;
+	line-height: 60px;
+}
+
+#homeButton{
+	position: absolute;
+	left: 230px;
+}
+
+
+
+
+
+/* =Hidden 
+-----------------------------------------------------------------------------*/
+#hidden ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	width: 884px;
+	height: 768px;
+}
+.componentDetail {
+	
+}
+
+
+
+/* =componentTop
+-----------------------------------------------------------------------------*/
+#componentTop h5.componentBack{
+	float:left;
+}
+
+#componentTop h5.componentTitle{
+	float:right;
+}
+
+
+
+/* =Footer
+-----------------------------------------------------------------------------*/
