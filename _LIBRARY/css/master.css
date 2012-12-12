@@ -87,6 +87,7 @@ body {
 	left: 0;
 	width: 9000px;
 	height: 768px;
+	padding: 0;
 	margin: 0;	
 	color: #FFF;
 	z-index: 1;	
@@ -110,15 +111,23 @@ body {
 }
 
 .iframeContainer {
-
-	overflow-x: scroll;
+	width:900px;
+	border: 10px solid rgba(255,255,255,0);
+	background: rgba(255,255,255,0.3);
+	margin:30px 10px 0 33px;
+	color: #393939;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	height: 670px;
+	position: relative;
+	overflow-x: scroll !important;
 	overflow-y: scroll !important;
 
 }
 
 .iframeContainer iframe {
-	min-height: 670px;
-	min-width: 900px;
+	min-height: 100%;
+	min-width: 100%;
 	
 }
 

@@ -28,7 +28,7 @@
 
 <div id="left">
 	
-		<video id="player_a" class="projekktor" poster="img/intro.png" title="this is projekktor" width="1024" height="768" >
+		<video id="player_a" class="projekktor" poster="assets/intro.png" title="this is projekktor" width="1024" height="768" >
 		    	<source src="http://www.mark-b.com/new/video/MarkPersona_6.mov" type="video/mp4" />
 	    </video>
 </div> <!-- end div#cont -->
@@ -42,7 +42,7 @@
 
 			<ul id="thelist" class="content">
 				<li class="video" alt="video" id="homeButton">
-					<div class="iconOn"><img src="../_LIBRARY/img/icon_motion.png" alt="icon_motion" width="40" height="40" /></div>
+					<div class="iconOn" style="background:rgba(45, 45, 45, 0.85)!important"><img src="../_LIBRARY/img/icon_home.png" alt="icon_motion" width="40" height="40" /></div>
 					
 					<a href="javascript:void(0)">
 					home
@@ -92,7 +92,7 @@
 
 		<div class="video">
 			<div class="whiteCont">
-				<video id="player_b" class="projekktor" poster="img/intro.png" title="this is projekktor" width="900" height="670" >
+				<video id="player_b" class="projekktor" poster="assets/intro.png" title="this is projekktor" width="900" height="670" >
 			    	<source src="http://www.mark-b.com/new/video/MarkPersona_6.mov" type="video/mp4" />
 			    </video>
 			</div>
@@ -101,10 +101,10 @@
 		<div class="iframe">
 			<div class="whiteCont">
 				<div>
-					<img src="img/tesla-microSite-1.jpg" alt="tesla-microSite-1" width="900" height="" />
+					<img src="assets/tesla-microSite-1.jpg" alt="tesla-microSite-1" width="900" height="" />
 					<div class="10pBottom"></div>
-					<img class="first" src="img/tesla-microSite-2.jpg" alt="tesla-microSite-2" width="217" height="" />
-					<img class="last" src="img/tesla-microSite-3.jpg" alt="tesla-microSite-3" width="217" height="" />
+					<img class="first" src="assets/tesla-microSite-2.jpg" alt="tesla-microSite-2" width="217" height="" />
+					<img class="last" src="assets/tesla-microSite-3.jpg" alt="tesla-microSite-3" width="217" height="" />
 				</div>
 			</div>
 		</div>
@@ -112,19 +112,19 @@
 		
 		<div class="photos">
 			<div class="whiteCont">
-				<video id="player_c" class="projekktor first" poster="img/intro.png" title="this is projekktor" width="671" height="442" >
+				<video id="player_c" class="projekktor first" poster="assets/intro.png" title="this is projekktor" width="671" height="442" >
 			    	<source src="http://www.mark-b.com/new/video/MarkPersona_6.mov" type="video/mp4" />
 			    </video>
-			    <img class="pLeft" src="img/mobile-tesla-1.jpg" alt="mobile-tesla-1" width="" height="" />
+			    <img class="pLeft" src="assets/mobile-tesla-1.jpg" alt="mobile-tesla-1" width="" height="" />
 			    <div class="pBottom"></div>
-			    <img class="first" src="img/mobile-tesla-2.jpg" alt="mobile-tesla-2" width="" height="" />
+			    <img class="first" src="assets/mobile-tesla-2.jpg" alt="mobile-tesla-2" width="" height="" />
 
 			</div>
 		</div>
 		<!-- emd photo div -->	
 		
 		<div class="iframe2">
-			<div class="whiteCont iframeContainer" >
+			<div class="iframeContainer" >
 				<iframe src="http://mark-b.com" sandbox="allow-forms allow-scripts"></iframe>
 			</div>
 		</div>
@@ -159,12 +159,18 @@
 	    });
 	    
 	    var myScroll;
+	    var iframeScroll;
 		function loaded() {
-			myScroll = new iScroll('.whiteCont',{ hScroll: false, vScrollbar: true, bounce:false, momentum:true, lockDirection:true });
+			myScroll = new iScroll('.whiteCont',
+				{ hScroll: false, vScrollbar: true, bounce:false, momentum:true, lockDirection:true }
+			);
+			iframeScroll = new iScroll('.iframeContainer',
+				{ hScroll: false, vScrollbar: true, bounce:false, momentum:true, lockDirection:true }
+			);
 		};
-		document.addEventListener('DOMContentLoaded', loaded, false);
+		document.readyState('DOMContentLoaded', loaded, false);
     
-     
+ 
     });
 
 
