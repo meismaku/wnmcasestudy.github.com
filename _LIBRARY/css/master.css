@@ -90,7 +90,6 @@ body {
 	margin: 0;	
 	color: #FFF;
 	z-index: 1;	
-	
 }
 
 /* hidden cont */
@@ -117,6 +116,12 @@ body {
 
 }
 
+.iframeContainer iframe {
+	min-height: 670px;
+	min-width: 900px;
+	
+}
+
 
 
 .pBottom{
@@ -131,7 +136,6 @@ body {
 
 .pLeft{
 	float: left;
-
 }
 
 .first{
@@ -208,9 +212,7 @@ div.iconOff {
 	position: absolute;
 	height: 40px;
 	width: 40px;
-	
 }
-
 
 div.iconOn {
 	background: rgba(59,175,179,1);
@@ -235,7 +237,14 @@ div.back {
 	vertical-align: middle;
 }
 
+li#homeButton a{
+	color: #3BAFB3 !important;
+	cursor:default !important;
+}
 
+li#homeButton {
+	cursor:default !important;
+}
 
 /* =Left
 -----------------------------------------------------------------------------*/
@@ -278,10 +287,6 @@ div.back {
 	line-height: 60px;
 }
 
-#homeButton{
-	position: absolute;
-	left: 230px;
-}
 
 
 

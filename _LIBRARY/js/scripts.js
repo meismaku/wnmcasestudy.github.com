@@ -9,7 +9,7 @@
 
     var defaultstate = function(){
     	$('ul#thelist>li').find('div').removeClass('iconOn').addClass('iconOff');
-    	$('li#homeButton').animate({left:'230px'},100,'linear');
+    	
 	    $('#right').animate({right:'30px'},200); //put back right
 	    $('#left').animate({left:'0'},300,function(){ // slide left background
 	       $('#bottomToolTip').animate({bottom:'0px'},100);
@@ -72,9 +72,11 @@
     	if($(this).attr('id') == 'homeButton'){ 
     		stopComponentVideos();
 	        defaultstate();
+	        $('li#homeButton').find('div').addClass('iconOn');
 	        status=0;
 	    } else if (status==0) //if at default state
 	    { 
+	    	$('li#homeButton').find('div').removeClass('iconOn').addClass('iconOff');
 	    	projekktor('#player_a').setPause(); //make sure designer video is stopped        	
 	        $this = $(this);
 	        var divClass = $this.attr('class');       
