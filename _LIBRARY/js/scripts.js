@@ -20,6 +20,7 @@
     };
     
     var stopComponentVideos = function(){
+    	projekktor('#player_a').setPause();
 	    // blunt function to pause component videos, dirty but gets the job done
     	if ( $(".projekktor").size() == 2 ){
     		projekktor('#player_b').setPause();
@@ -68,6 +69,7 @@
         
     //right onclick
     $('ul#thelist>li').on('tap', function(){
+    	projekktor('#player_a').setPause();
 	    $(this).find('div').removeClass('iconOff').addClass('iconOn');
     	if($(this).attr('id') == 'homeButton'){ 
     		stopComponentVideos();
