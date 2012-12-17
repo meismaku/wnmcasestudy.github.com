@@ -57,10 +57,10 @@
 				</li>
 				<li class="iframe" alt="iframe">
 					<div class="iconOff">
-						<img src="../_LIBRARY/img/icon_web.png" alt="icon_motion" width="40" height="40" />
+						<img src="../_LIBRARY/img/icon_interact.png" alt="icon_motion" width="40" height="40" />
 					</div>
 					<a href="javascript:void(0)" title="Dynamic Title 2" alt="Dynamic text describing stuff for this stuff. Website?">
-						inseat 
+						interact 
 					</a>
 				</li>
 				
@@ -92,10 +92,7 @@
 
 		<div class="video">
 			<div class="whiteCont">
-				<video id="player_b" class="projekktor" poster="assets/motionBG.jpg" title="this is projekktor" width="900" height="670" >
-			    	<source src="http://virgleynes-designs.com/videos/Virgin.osv" />
-			    	
-			    </video>
+				<iframe id="vimeoplayer" src="http://player.vimeo.com/video/51927936?api=1" width="900" height="670" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
 			</div>
 		</div><!-- end video div -->
 		
@@ -146,7 +143,7 @@
 		
 		<div class="iframe2">
 			<div class="iframeContainer" >
-				<iframe src="http://marissagamberg.com" sandbox="allow-forms allow-scripts"></iframe>
+				<iframe height="1500px" src="http://marissagamberg.com" sandbox="allow-forms allow-scripts"></iframe>
 			</div>
 		</div>
 		<!-- emd photo div -->				
@@ -156,6 +153,7 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
 <script type="text/javascript" src="../_LIBRARY/js/hammer.js"></script>
 <script type="text/javascript" src="../_LIBRARY/js/jquery.specialevent.hammer.js"></script>
 <script type="text/javascript" src="../_LIBRARY/js/projekktor-1.1.03r117.min.js"></script>
@@ -163,39 +161,31 @@
 <script type="text/javascript" src="../_LIBRARY/js/scripts.js"></script>
 
 <script type="text/javascript">
+  $(document).ready( function() {    
+  
+	function loaded() {
+		document.addEventListener('touchmove', function(e){ e.preventDefault(); });
+		var myScroll;
+		var iframeScroll;
+		
+		myScroll = new iScroll('div.whiteCont',
+			{ hScroll: false, vScrollbar: true, bounce:true, momentum:true, lockDirection:true }
+		);
+		iframeScroll = new iScroll('div.iframeContainer',
+			{ hScroll: false, vScrollbar: true, bounce:true, momentum:true, lockDirection:true }
+		);
+	};
+	document.addEventListener('DOMContentLoaded', loaded);
 
-  $(document).ready(
-  	function() {
-    	projekktor('#player_a', {
-	    	volume: 0.8,
-	    	controls :true	
-	    });
-	    projekktor('#player_b', {
-	    	volume: 0.8,
-	    	controls :false	
-	    });
-	    projekktor('#player_c', {
-	    	volume: 0.8,
-	 	    controls :false	
-	    });
-	    
-	    var myScroll;
-	    var iframeScroll;
-		function loaded() {
-			myScroll = new iScroll('.whiteCont',
-				{ hScroll: false, vScrollbar: true, bounce:false, momentum:true, lockDirection:true }
-			);
-			iframeScroll = new iScroll('.iframeContainer',
-				{ hScroll: false, vScrollbar: true, bounce:false, momentum:true, lockDirection:true }
-			);
-		};
-		document.readyState('DOMContentLoaded', loaded, false);
     
  
     });
+    
+
 
 
 </script>
+ 
  
 
 </body>
