@@ -22,34 +22,16 @@
     var stopComponentVideos = function(){
     	projekktor('#player_a').setPause();
 	    // blunt function to pause component videos, dirty but gets the job done
-    	if ( $(".projekktor").size() == 2 ){
-    		projekktor('#player_b').setPause();
-    	};
-    	if ( $(".projekktor").size() == 3 ){
-    		projekktor('#player_b').setPause();
-    		projekktor('#player_c').setPause();
-    	};
-    	if ( $(".projekktor").size() == 4 ){
-    		projekktor('#player_b').setPause();
-    		projekktor('#player_c').setPause();
-    		projekktor('#player_d').setPause();
-    	};
-    	if ( $(".projekktor").size() == 5 ){
-    		projekktor('#player_b').setPause();
-    		projekktor('#player_c').setPause();
-    		projekktor('#player_d').setPause();
-    		projekktor('#player_e').setPause();
-    	};
-    	if ( $(".projekktor").size() == 6 ){
-    		projekktor('#player_b').setPause();
-    		projekktor('#player_c').setPause();
-    		projekktor('#player_d').setPause();
-    		projekktor('#player_e').setPause();
-    		projekktor('#player_f').setPause();
-    	};
+    	if ( $(".projekktor").size() != 0 ){
+    		if( $('#player_b').size() != 0 ){projekktor('#player_b').setPause();}
+    		if( $('#player_c').size() != 0 ){projekktor('#player_c').setPause();}
+    		if( $('#player_d').size() != 0 ){projekktor('#player_c').setPause();}
+    		if( $('#player_e').size() != 0 ){projekktor('#player_c').setPause();}
+    		if( $('#player_f').size() != 0 ){projekktor('#player_c').setPause();}
+    		if( $('#player_g').size() != 0 ){projekktor('#player_c').setPause();}
+    	};    	
 	};
 
-    	
     //left click 
     $('#left2').on('tap swipe', function(){
 	    if(status<1) //make sure that swipe is left swipe
@@ -66,9 +48,15 @@
 	        status=0;
 	    };
     });
-        
+    //vimeo player, full steam ahead
+    if($('#vimeoplayer').size()!=0){
+    var iframe = $('#vimeoplayer')[0],
+		player = $f(iframe);
+	}
     //right onclick
     $('ul#thelist>li').on('tap', function(){
+    	if($('#vimeoplayer').size()!=0){
+    		player.api('pause');};
     	projekktor('#player_a').setPause();
 	    $(this).find('div').removeClass('iconOff').addClass('iconOn');
     	if($(this).attr('id') == 'homeButton'){ 
@@ -113,7 +101,7 @@
 	        defaultstate();
 	        $('li#homeButton').animate({left:'230px'},100,'linear');
 	        status=0;
-	    };    
+	    };
     });
     
   

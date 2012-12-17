@@ -104,9 +104,9 @@ body {
 	background: rgba(255,255,255,0.3);
 	margin:30px 10px 0 33px;
 	color: #393939;
-	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow: scroll;
 	height: 670px;
+	z-index: 1;
 	position: relative;
 }
 
